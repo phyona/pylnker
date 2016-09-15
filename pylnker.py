@@ -149,7 +149,7 @@ def ms_time_to_unix(windows_time):
 
 def add_info(f,loc):
 
-    tmp_len_hex = reverse_hex(read_unpack(f,loc,1))
+    tmp_len_hex = reverse_hex(read_unpack(f,loc,2)) # Length field is 2 Bytes not only 1
     tmp_len = 2 * int(tmp_len_hex, 16)
 
     loc += 1
